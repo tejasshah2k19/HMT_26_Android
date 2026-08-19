@@ -47,4 +47,16 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvInputNameResult"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/linearLayoutInputNameButton"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textSize="15pt"
+        />
+
+
 </RelativeLayout>

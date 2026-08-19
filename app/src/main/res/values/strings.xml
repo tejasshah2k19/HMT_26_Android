@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HMT_26_Android</string>
+    <string name="buy_value">Buy Value</string>
+    <string name="sell_value">Sell Value</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="exempt">Exempt</string>
+    <string name="calculate_tax">Calculate Tax</string>
+    <string name="i_accept_terms_and_conditions">I Accept Terms and Conditions</string>
 </resources>

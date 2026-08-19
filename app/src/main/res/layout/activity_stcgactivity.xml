@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".STCGActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtSTCGBuy"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/buy_value"
+                android:layout_marginTop="100dp"
+            android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+            />
+
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtSTCGSell"
+            android:layout_below="@id/edtSTCGBuy"
+            android:hint="@string/sell_value"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSTCGExempt"
+            android:text="@string/exempt"
+            android:layout_below="@id/edtSTCGSell"
+            android:layout_marginTop="11dp"
+            android:textSize="8pt"
+                android:layout_marginStart="20dp"
+            />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgSTCGExempt"
+            android:layout_below="@id/edtSTCGSell"
+            android:layout_marginStart="100dp"
+            android:orientation="horizontal"
+            >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbSTCGYes"
+                    android:text="@string/yes"
+                    />
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbSTCGNo"
+                    android:text="@string/no"
+                    />
+
+
+        </RadioGroup>
+
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbSTCGCondition"
+            android:text="@string/i_accept_terms_and_conditions"
+            android:layout_below="@id/rgSTCGExempt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSTCGCalc"
+            android:text="@string/calculate_tax"
+            android:layout_below="@id/cbSTCGCondition"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            />
+
+
+
+
+</RelativeLayout>
