@@ -44,9 +44,10 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.i("SignupActivity","Signup button Clicked......");
-
+                String email = edtEmail.getText().toString(); //read
                 //navigate to login activity
                 Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                intent.putExtra("email",email);
                 startActivity(intent);//
             }
         });

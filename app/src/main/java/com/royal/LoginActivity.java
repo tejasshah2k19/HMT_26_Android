@@ -2,6 +2,7 @@ package com.royal;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -30,6 +31,13 @@ public class LoginActivity extends AppCompatActivity {
 
     //bind
         tvSignuplink = findViewById(R.id.tvLoginSignuplink);
+
+
+    //intent read
+    Intent intent = getIntent();
+    String email = intent.getStringExtra("email");
+    Log.i("LoginActivity",email);
+
      //click
         tvSignuplink.setOnClickListener(new View.OnClickListener() {
             @Override
