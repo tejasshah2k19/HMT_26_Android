@@ -1,5 +1,6 @@
 package com.royal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -43,6 +44,10 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.i("SignupActivity","Signup button Clicked......");
+
+                //navigate to login activity
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(intent);//
             }
         });
 
