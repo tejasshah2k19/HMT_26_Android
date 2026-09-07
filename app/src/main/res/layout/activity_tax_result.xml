@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaxResultActivity"
+    android:background="#AABBCC"
+    >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTaxResultPan"
+            android:textSize="10pt"
+            android:text="PAN"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="30dp"
+            />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTaxResultAmount"
+        android:textSize="10pt"
+        android:text="Amount"
+        android:layout_below="@id/tvTaxResultPan"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTaxResultIncomeTaxStatus"
+        android:textSize="10pt"
+        android:text="Status"
+        android:layout_below="@id/tvTaxResultAmount"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        />
+
+
+</RelativeLayout>

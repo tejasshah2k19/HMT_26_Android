@@ -7,4 +7,7 @@
     <string name="exempt">Exempt</string>
     <string name="calculate_tax">Calculate Tax</string>
     <string name="i_accept_terms_and_conditions">I Accept Terms and Conditions</string>
+    <string name="pan">Pan</string>
+    <string name="amount">Amount</string>
+    <string name="submit">Submit</string>
 </resources>

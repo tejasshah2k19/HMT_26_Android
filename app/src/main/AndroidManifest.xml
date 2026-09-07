@@ -12,49 +12,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HMT_26_Android">
         <activity
+            android:name=".TaxResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InputTaxActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".STCGActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+             </activity>
         <activity
             android:name=".CalcActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+             </activity>
         <activity
             android:name=".InputNameActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+             </activity>
         <activity
             android:name=".RegistrationActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+          </activity>
         <activity
             android:name=".NameActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".LoginActivity"
@@ -68,21 +51,12 @@
         <activity
             android:name=".SignupActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+         </activity>
         <activity
             android:name=".WelcomeActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+           </activity>
     </application>
 
 </manifest>

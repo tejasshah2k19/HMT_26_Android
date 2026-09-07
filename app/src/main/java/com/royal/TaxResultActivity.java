@@ -1,8 +1,8 @@
 package com.royal;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,27 +10,35 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class TaxResultActivity extends AppCompatActivity {
+
+    TextView tvPan,tvAmount,tvTaxStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_tax_result);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        SharedPreferences sharedPreferences  = getSharedPreferences("hmt_android",MODE_PRIVATE);
-        String email = sharedPreferences.getString("email","-1");
-        String loggedIn = sharedPreferences.getString("loggedIn","-1");
+        tvPan = findViewById(R.id.tvTaxResultPan);
+        tvAmount = findViewById(R.id.tvTaxResultAmount);
+        tvTaxStatus = findViewById(R.id.tvTaxResultIncomeTaxStatus);
 
-        if(loggedIn.equals("-1")){
-            Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
-            startActivity(intent);
-        }
+
+        Intent intent = getIntent();
+
+       String pan=  intent.getStringExtra("pan");
+       int amount =  intent.getIntExtra("amount",0);
+       String taxStatus =  intent.getStringExtra("taxStatus");
+
+        tvPan.setText(pan);
+        tvAmount.setText(amount+"");
+        tvTaxStatus.setText(taxStatus);
 
     }
 }
