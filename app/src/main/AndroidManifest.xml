@@ -12,36 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HMT_26_Android">
         <activity
-            android:name=".TaxResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".InputTaxActivity"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".STCGActivity"
-            android:exported="true">
-             </activity>
-        <activity
-            android:name=".CalcActivity"
-            android:exported="true">
-             </activity>
-        <activity
-            android:name=".InputNameActivity"
-            android:exported="true">
-             </activity>
-        <activity
-            android:name=".RegistrationActivity"
-            android:exported="true">
-          </activity>
-        <activity
-            android:name=".NameActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true">
+            android:name=".ContactNumListActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,14 +21,40 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignupActivity"
+            android:name=".ListUserActivity"
             android:exported="true">
 
-         </activity>
+        </activity>
+        <activity
+            android:name=".TaxResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InputTaxActivity"
+            android:exported="true" />
+        <activity
+            android:name=".STCGActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CalcActivity"
+            android:exported="true" />
+        <activity
+            android:name=".InputNameActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".NameActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true" />
         <activity
             android:name=".WelcomeActivity"
-            android:exported="true">
-           </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

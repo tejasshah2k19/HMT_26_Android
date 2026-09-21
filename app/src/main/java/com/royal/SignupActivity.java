@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +20,7 @@ public class SignupActivity extends AppCompatActivity {
     //gui component xml -> java declare
     Button btnSubmit;
     EditText edtFirstName,edtEmail,edtPassword;
+    Spinner spinnerCity ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,15 @@ public class SignupActivity extends AppCompatActivity {
     edtEmail = findViewById(R.id.edtSignupEmail);
     edtPassword = findViewById(R.id.edtSignupPassword);
     btnSubmit = findViewById(R.id.btnSignupSubmit);
+    spinnerCity = findViewById(R.id.spinnerSignupCity);
+
+    //code - spinner
+        String cityList [] = {"Ahmedabad","Surat","Himmatnagar","Gandhinagar"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,cityList);
+
+        spinnerCity.setAdapter(adapter);
+
 
     Log.i("SignupActivity","binding completed....");
 
