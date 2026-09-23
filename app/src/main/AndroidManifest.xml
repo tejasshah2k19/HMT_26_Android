@@ -12,8 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HMT_26_Android">
         <activity
+            android:name=".LinearLayoutDemoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ContactNumListActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +25,7 @@
         </activity>
         <activity
             android:name=".ListUserActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".TaxResultActivity"
             android:exported="false" />
