@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiamondGameActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+           android:layout_weight="2"
+            >
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:id="@+id/imgBtnDiamondB1"
+                />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/imgBtnDiamondB2"
+
+                android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/imgBtnDiamondB3"
+
+                android:layout_height="match_parent" android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            >
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/imgBtnDiamondB4"
+
+                android:layout_height="match_parent" android:layout_weight="1"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/imgBtnDiamondB5"
+
+
+                android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/imgBtnDiamondB6"
+
+                android:layout_height="match_parent" android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            >
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/imgBtnDiamondB7"
+
+                android:layout_height="match_parent" android:layout_weight="1"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/imgBtnDiamondB8"
+
+                android:layout_height="match_parent" android:layout_weight="1"/>
+            <ImageButton
+                android:layout_width="0dp"
+                android:id="@+id/imgBtnDiamondB9"
+                android:layout_height="match_parent" android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
