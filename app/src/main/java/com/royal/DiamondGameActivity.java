@@ -1,9 +1,12 @@
 package com.royal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +21,9 @@ public class DiamondGameActivity extends AppCompatActivity {
 
     ImageButton imgBtnDiamond[] = new ImageButton[9];
     int blast = 0;
+    int checkout = 0 ;
 
+    Button btnCheckout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +46,8 @@ public class DiamondGameActivity extends AppCompatActivity {
         imgBtnDiamond[7] = findViewById(R.id.imgBtnDiamondB8);
         imgBtnDiamond[8] = findViewById(R.id.imgBtnDiamondB9);
 
+        btnCheckout = findViewById(R.id.btnDiamondCheckout);
+
         int i;
         for(ImageButton btn : imgBtnDiamond) {
             btn.setOnClickListener(new View.OnClickListener() {
@@ -51,11 +58,25 @@ public class DiamondGameActivity extends AppCompatActivity {
                         bomb();//0 1
                         if (blast == 0) {
                             btn.setBackgroundResource(R.drawable.diamond_hmt_512);
+                            checkout = 1;
+                            btnCheckout.setVisibility(View.VISIBLE);
+
                         } else {
                             btn.setBackgroundResource(R.drawable.blast_hmt);
+                            //toast
+                            //intent -> start game
+
+                            Toast.makeText(getApplicationContext(),"Sorry !!!! Game Over ",Toast.LENGTH_LONG).show();
+
+                                     Intent intent = new Intent(getApplicationContext(), GameMenuActivity.class);
+                                    startActivity(intent);
+
+                            }
+
+
                         }
                     }
-                }
+
             });
         }
 
@@ -69,4 +90,6 @@ public class DiamondGameActivity extends AppCompatActivity {
             blast= 1;
         }
     }
+
+
 }//class
