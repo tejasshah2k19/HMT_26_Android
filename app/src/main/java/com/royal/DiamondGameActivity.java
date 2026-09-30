@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -22,7 +23,8 @@ public class DiamondGameActivity extends AppCompatActivity {
     ImageButton imgBtnDiamond[] = new ImageButton[9];
     int blast = 0;
     int checkout = 0 ;
-
+    int point = 200;
+    TextView tvPoint;
     Button btnCheckout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,8 @@ public class DiamondGameActivity extends AppCompatActivity {
         imgBtnDiamond[8] = findViewById(R.id.imgBtnDiamondB9);
 
         btnCheckout = findViewById(R.id.btnDiamondCheckout);
-
+        tvPoint = findViewById(R.id.tvDiamondPoint);
+        tvPoint.setText("Point : "+point+"");
         int i;
         for(ImageButton btn : imgBtnDiamond) {
             btn.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +63,8 @@ public class DiamondGameActivity extends AppCompatActivity {
                             btn.setBackgroundResource(R.drawable.diamond_hmt_512);
                             checkout = 1;
                             btnCheckout.setVisibility(View.VISIBLE);
+                            point = point * 2;
+                            tvPoint.setText("Point : "+point+"");
 
                         } else {
                             btn.setBackgroundResource(R.drawable.blast_hmt);
