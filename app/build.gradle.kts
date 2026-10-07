@@ -40,4 +40,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Retrofit networking library
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    // Converter library to parse JSON via Gson
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 }

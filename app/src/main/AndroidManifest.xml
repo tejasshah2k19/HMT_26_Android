@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,25 +14,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HMT_26_Android">
         <activity
-            android:name=".GameMenuActivity"
-            android:exported="true" >
+            android:name=".diamondgame.DiamondLoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".diamondgame.DiamondgSignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GameMenuActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".DiamondGameActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".LinearLayoutDemoActivity"
             android:exported="false" />
         <activity
             android:name=".ContactNumListActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".ListUserActivity"
             android:exported="true" />
