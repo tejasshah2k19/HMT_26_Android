@@ -2,6 +2,7 @@ package com.royal.diamondgame;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +17,12 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.royal.R;
+import com.royal.config.RetrofitClient;
 import com.royal.model.UserModel;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class DiamondgSignupActivity extends AppCompatActivity {
 
@@ -103,7 +109,19 @@ public class DiamondgSignupActivity extends AppCompatActivity {
         userModel.setPassword(password);
         userModel.setCredits(5000);
 
-        //api call 
+
+        RetrofitClient.getApi().signup(userModel).enqueue(new Callback<Object>() {
+            @Override
+            public void onResponse(Call<Object> call, Response<Object> response) {
+                Log.i("DiamondSignupActivity","User Signup done");
+            }
+
+            @Override
+            public void onFailure(Call<Object> call, Throwable throwable) {
+                Log.i("DiamondSignupActivity","User Signup fail....");
+            }
+        });
+
 
 
         Toast.makeText(this, "Account created for " + firstName, Toast.LENGTH_SHORT).show();
